@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+	
+<html>
+	<meta charset="UTF-8">
+<head>
+<style>
+	
+  body {
+    background-image: url("https://telegra.ph/file/7a8d09d525b2e9628898e.png");
+    background-size: cover;
+  }
+/* تعريف الأنماط للقائمة الجانبية */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FEC007;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+
+  font-size: 50px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #FEC007;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="#">الـكــتــب</a>
+<a href="#">اختبارات</a>
+<a href="#">الـــدعــم</a>
+</div>
+
+<div>
+<button class="openbtn" onclick="openNav()">&#9776</button> 
+</div>
+
+<script>
+/* تعريف الدوال لفتح وإغلاق القائمة الجانبية */
+function openNav() {
+document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidebar").style.width = "0";
+}
+</script>
+
+</body>
+</html>
